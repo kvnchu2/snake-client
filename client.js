@@ -11,6 +11,7 @@ const connect = function() {
   conn.on('data', data => {console.log(data)});
   conn.on('connect', () => {console.log("Successfully connected to game server")})
   conn.on('connect', () => {conn.write('Name: KKC')})
+  conn.on('connect', () => {conn.write('Say: Hi')})
 
 
   return conn;
